@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Donjons et Dragons</title>
+        <link rel="stylesheet" href="../../static/main/style.css"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1 class="title">Donjons et Dragons</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'download' %}">Téléchargement</a></li>
+                    <li><a href="{% url 'contact' %}">Nous contacter</a></li>
+                    <li><a href="../admin/login">Se connecter</a></li>
+                    <li><a href="{% url 'en_index' %}">🇬🇧</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <h2>DONJONS ET DRAGONS</h2>
+            <p>Plus qu'un jeu, une immersion !<br/><br/>
+                <a class="btn" href="{% url 'download' %}">Télécharger le jeu GRATUITEMENT</a>
+            </p>
+            <div class="image">
+                <img src="http://assets.stickpng.com/images/5a01ee8118e87004f1ca4317.png" alt="Dragons">
+            </div>
+        </div>
+</div>
+</body>
+</html>

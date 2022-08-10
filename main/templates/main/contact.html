@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Donjons et Dragons</title>
+        <link rel="stylesheet" href="../../static/main/style.css"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1 class="title">Donjons et Dragons</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'download' %}">Téléchargement</a></li>
+                    <li><a href="{% url 'contact' %}">Nous contacter</a></li>
+                    <li><a href="../admin/login">Se connecter</a></li>
+                    <li><a href="{% url 'en_index' %}">🇬🇧</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div class="content">
+        <h1 class="title-of-content">Nous contacter</h1>
+        <div class="form">
+             <form method="post">
+            {% csrf_token %}
+            <label>
+                <input type="text" name="name" placeholder="Prénom / Nom de famille" required>
+            </label>
+            <label>
+                <input type="email" name="email" placeholder="Email" required>
+            </label>
+
+            <label>
+                <textarea name="message" rows="4" cols=60" placeholder="Votre message" required></textarea>
+            </label>
+            <label>
+                <input type="submit" name="submit" value="Submit">
+            </label>
+        </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

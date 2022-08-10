@@ -1,0 +1,36 @@
+{% extends 'english_version/blog.html' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Our Blog</title>
+        <link rel="stylesheet" href="../../static/main/style.css"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1 class="title">Dungeons and Dragons</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'en_index' %}">Home</a></li>
+                    <li><a href="{% url 'en_blog' %}">Blog</a></li>
+                    <li><a href="{% url 'en_download' %}">Download</a></li>
+                    <li><a href="{% url 'en_contact' %}">Contact</a></li>
+                    <li><a href="../admin/login">Login</a></li>
+                    <li><a href="{% url 'article' %}">🇫🇷</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div class="content">
+        {% block content %}
+            <h1 class="title-page"> {{ post.title }}</h1>
+            <p>Published by {{ post.author }} the {{ post.date }}</p>
+            <p>{{ post.content }}</p>
+        {% endblock %}
+
+    </div>
+</div>
+</body>
+</html>

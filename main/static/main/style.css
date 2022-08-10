@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:url("../../static/main/medieval.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar{
+    width:95%;
+    height:10%;
+    margin:auto;
+}
+
+.logo{
+    float:left;
+    height:70px;
+}
+
+.title{
+    color:white;
+    text-shadow:  0 0 7px #ff0008, 0 0 10px #ff000b, 0 0 42px rgb(0,0,0), 0 0 77px rgb(230, 18, 124), 0 0 100px rgb(230, 18, 124);
+    font-size:40px;
+    padding:20px;
+    float:left;
+}
+
+nav{
+    float:right;
+    height:70px;
+}
+
+ul{
+    list-style:none;
+    display:flex;
+    margin-top:33px;
+}
+
+ul li a{
+    text-decoration:none;
+    padding:10px;
+    color:white;
+    text-shadow:  0 0 7px #ff0008, 0 0 10px #ff000b, 0 0 42px rgb(0,0,0), 0 0 77px rgb(230, 18, 124), 0 0 100px rgb(230, 18, 124);
+    font-weight:bold;
+}
+
+/* Home Page */
+
+.main{
+    float:left;
+    margin-left:4%;
+    margin-top:13%;
+    color:white;
+    font-weight:bold;
+}
+
+.main h2{
+    font-size:50px;
+}
+
+.main p{
+    text-transform:uppercase;
+    color:#fcc14e;
+    font-size:20px;
+    padding-top:20px;
+}
+
+.main .btn{
+    color:white;
+    padding:10px;
+    border:1px solid white;
+    border-radius:5px;
+    font-size:15px;
+    text-decoration: none;
+}
+
+.main .btn:hover{
+    background-color:black;
+    color:white;
+    border:black 1px solid;
+}
+
+.image img{
+    position: absolute;
+    width:455px;
+    left:780px;
+    top:100px;
+}
+
+
+/* Other pages */
+
+.content{
+    text-align:center;
+    margin-top:13%;
+    color:white;
+    font-weight:bold;
+}
+
+.content{
+    text-transform:uppercase;
+}
+
+.content h1{
+    font-weight:100;
+    color:white;
+    text-shadow: 0 0 7px #fac500, 0 0 10px #ffcd00, 0 0 42px rgb(0,0,0), 0 0 77px rgb(230, 18, 124), 0 0 100px rgb(230, 18, 124);
+    font-size:50px;
+}
+
+.content h2{
+    font-size:15px;
+    padding-top:20px;
+}
+
+.content p{
+    font-size:15px;
+    padding-top:20px;
+}
+
+.content a{
+    color:#fcc14e;
+    font-weight:bold;
+}
+
+
+label{
+    display:block;
+}
+
+
+.form input{
+    background-color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #ccc;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+textarea{
+    background-color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #ccc;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    resize: none;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 1000px) {
+    body{
+        height:120vh;
+        width:100vw;
+    }
+    .navbar h1{
+        margin-left:50%;
+        font-size:54px;
+        width:100%;
+    }
+
+    nav{
+        margin-top:40px;
+        margin-left:auto;
+        margin-right:auto;
+        width:100%;
+    }
+
+    ul{
+        display:block;
+    }
+
+    ul li{
+        font-size:22px;
+        margin-top:20px;
+        text-align:center;
+    }
+
+    img{
+        display:none;
+    }
+
+    .main h2{
+        width:100%;
+        text-align:center;
+        margin:115px 17%;
+        font-size:50px;
+    }
+
+    .main p{
+        width: 100%;
+        margin:-140px 15%;
+        padding:20px;
+        text-align:center;
+        font-size:35px;
+    }
+
+    .main .btn{
+        padding:20px;
+        font-size:19px;
+    }
+
+    .content h1{
+        margin:425px 0;
+        font-size:55px;
+    }
+
+    .content h2{
+        margin:-400px 0;
+    }
+
+    .content p{
+        margin:400px 0;
+    }
+
+    .form{
+        margin:-380px 0;
+        width:100%;
+    }
+
+    .form textarea{
+        width:80%;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Our Blog</title>
+        <link rel="stylesheet" href="../../static/main/style.css"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1 class="title">Dungeons and Dragons</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'en_index' %}">Home</a></li>
+                    <li><a href="{% url 'en_blog' %}">Blog</a></li>
+                    <li><a href="{% url 'en_download' %}">Download</a></li>
+                    <li><a href="{% url 'en_contact' %}">Contact</a></li>
+                    <li><a href="../admin/login">Login</a></li>
+                    <li><a href="{% url 'blog' %}">🇫🇷</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div class="content">
+        <h1 class="title-of-content">Our Blog</h1>
+        {% block content %}
+            {% if post %}
+                 {% for posts in post %}
+                    <h2>{{ posts.title }} by <i>{{ posts.author }}</i></h2>
+                    <p>Date of publication : {{ posts.date }}<br/><br/>
+                        <a href="{% url 'en_article' posts.url %}">Read More ...</a>
+                    </p>
+                {% endfor %}
+            {% else %}
+                <p>No articles have been published</p>
+            {% endif %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>

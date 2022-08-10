@@ -1,0 +1,35 @@
+{% extends 'main/blog.html' %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Notre Blog</title>
+        <link rel="stylesheet" href="../../static/main/style.css"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1 class="title">Donjons et Dragons</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Accueil</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'download' %}">Téléchargement</a></li>
+                    <li><a href="{% url 'contact' %}">Nous contacter</a></li>
+                    <li><a href="../admin/login">Se connecter</a></li>
+                    <li><a href="{% url 'en_index' %}">🇬🇧</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div class="content">
+        {% block content %}
+        <h1 class="title-page"> {{ post.title }}</h1>
+            <p>Published by {{ post.author }} the {{ post.date }}</p>
+            <p>{{ post.content }}</p>
+    {% endblock %}
+    </div>
+</div>
+</body>
+</html>
